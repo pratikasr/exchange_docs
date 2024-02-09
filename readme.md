@@ -49,7 +49,7 @@ Trade Initiation and Execution:
 
 -   Liability Calculation for Lay Bets: The liability of a lay bet (the amount the layer risks losing) is indeed calculated as the stake multiplied by (odds - 1), since the layer needs to pay out this amount if the outcome they bet against occurs. Liability=Stake×(Odds−1)
 -   Payout for Back Bets: The payout for a winning back bet includes the stake returned plus winnings calculated as stake multiplied by (odds - 1). However, the formula provided calculates the total return (stake + winnings). Payout=Stake×Odds
--   Payout for Lay Bets: For a winning lay bet, the layer keeps the backer's stake. This formula assumes the layer's liability has already been accounted for in their balance at the time the bet was matched. Payout=Stake
+-   Payout for Lay Bets: For a winning lay bet, the layer keeps the backer's stake. This formula assumes the layer's liability has already been accounted for in their balance at the time the bet was matched. Payout=Stake + liability
 -   Commission on Winnings: Typically, the commission is only charged on the net profit from a market, not the total return. If "Net Winnings" refers to profit (total payout minus the initial stake), then the formula is applied correctly. Otherwise, for clarity, especially in a back bet scenario, the formula should explicitly deduct the stake to calculate commission only on the winnings: Commission=(Payout−Stake)×CommissionRate OR Commission=NetWinnings×CommissionRate
   
 ### Commission Handling Example
