@@ -66,3 +66,19 @@ Trade Initiation and Execution:
 3.  Order Matching: The system automatically matches these orders based on their compatibility.
 4.  Event Conclusion and Settlement: The match ends in a "win". The market is settled, and the back bet user wins $200 (including their initial stake), after deducting a 5% commission ($10), netting $190.
 5.  Token Redemption: The winning user redeems their conditional tokens for the payout, and the tokens are burned.
+   
+
+### Example Scenario 2
+Lets take example of a horse match. On each market there are runners, e.g. horses in a horse race. On runners the Back/Lay bets are placed. Back bet means that the runner will win, Lay bet that it will lose. Fig. 1 illustrates the classical view of a runner in the market. In the middle column at green is the price scale. The price can also be referred as odd. Bets are placed on a given price, which represents the chances of the runner win.
+E.g. the price 2.0 is a 50% of chances (1/2 = 0.5), price 1.01 is a 99% of chances (1/1.01 = 0.99), 1000 is a 0.1% of chances (1/1000 = 0.001). 
+On the left side, next to the prices column, in pink is the amount column formed by the Lay bets. On the right side, the column in blue, next to the prices column, is the amount column formed by the Back bets. 
+The first and fifth column represent our own unmatched bets. In this case (Fig. 1) we have the following bets placed (but not matched yet):  - Lay of 10.00€ at 4.30 (Lay 10@4.3); - Back of 10.00€ at 4.70 (Back 10@4.7); and - Back of 5.00€ at 4.60 (Back 5@4.6).
+
+
+![Alt text](<Screenshot 2024-02-14 at 11.15.45 AM.png>)
+
+For example, in the market state of Fig. 1 if a Back bet 15@4.4 is placed (on the blue side) it will match 8.00@4.5 and 2.00@4.4 , and will leave the remaining 5.00@4.4 unmatched (waiting for someone to buy with a Lay bet). The traded volume information will be updated. This is how the prices move in the market. Since this bet was matched at two different prices, the global matched price of this bet can be calculated using equation 1.
+
+![Alt text](<Screenshot 2024-02-14 at 11.22.17 AM.png>)
+
+If a Back is placed above the best offer in the market (4.5 in Fig. 1), for example 15@4.9, it will stay in the market unmatched and, so for, waiting to be matched. The same happens to a Lay bet if it is placed at a lower price than the best offer (counter bet waiting to be matched). Only unmatched or partial unmatched bets can be canceled. 
